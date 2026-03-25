@@ -149,56 +149,104 @@ Tested dynamically via temperature-controlled sampling for 1000 generated sequen
 
 ---
 
-## 📂 Directory Structure
+## 📂 Directory Structure & Code Flow
+
+### Problem 1: Word2Vec Pipeline
+The Problem 1 directory forms a complete linear pipeline from raw web data to evaluated semantic models.
 
 ```text
 Assignment_2/
 ├── Problem1/
-│   ├── scrape_data.py          # BFS web crawler + Stream PDF downloader
-│   ├── preprocess.py           # Text cleaning, NLTK constraints, ASCII filtering
-│   ├── train_word2vec.py       # C-optimized multi-threaded Gensim deployment
-│   ├── word2vec_scratch.py     # Pure Numpy discrete gradient processing
-│   ├── visualize.py            # PCA, t-SNE scatter plots & Wordcloud rendering
-│   └── corpus/                 # Preprocessed dataset (cleaned_corpus.txt, 450K tokens)
+│   ├── scrape_data.py          # [Step 1] Initializes a BFS queue to crawl iitj.ac.in. Downloads HTML and streams PDFs (like Annual Reports and Academic Regulations) subject to size limits.
+│   ├── preprocess.py           # [Step 2] Ingests raw scraped files, strips URLs/HTML/emails using regex, tokenizes sentences/words via NLTK, removes custom domain stopwords, and writes the unified `cleaned_corpus.txt`.
+│   ├── train_word2vec.py       # [Step 3] Loads the cleaned corpus to train 6 distinct Gensim architectures (CBOW & Skip-Gram across 50, 100, 200 dimensions). Saves `.model` binaries.
+│   ├── word2vec_scratch.py     # [Step 4] Natively implements SGNS/CBOW math using pure NumPy matrix gradients. Handles custom vocabulary building and frequency subsampling internally. Saves `.pkl` checkpoints.
+│   ├── analysis.py             # [Step 5] Evaluates the trained Gensim `.model` files by querying top-5 nearest neighbours and solving 3CosAdd analogy equations (e.g. A:B :: C:D). Saves results to JSON.
+│   ├── compare_models.py       # [Step 6] Automates a side-by-side performance benchmarking (Training Time, Analogy Accuracy) between Gensim and the NumPy scratch implementations.
+│   ├── visualize.py            # [Step 7] Reduces 200D/100D embeddings to 2D using PCA and t-SNE algorithms. Plots categorical word clusters and generates the corpus wordcloud.
+│   ├── corpus/                 # Auto-generated directory containing `raw/` scraped files and the final `cleaned_corpus.txt`.
+│   ├── models/                 # Auto-generated directory storing saved weights (`.model` and `.pkl`).
+│   └── outputs/                # Auto-generated directory for all analytical JSONs and high-res PNG plots.
+```
+
+### Problem 2: Character-Level RNN Pipeline
+The Problem 2 directory follows an object-oriented modular design, allowing interchangeable recurrent architectures to share the same training and evaluation framework.
+
+```text
 │
 └── Problem2/
-    ├── train.py                # Normalized Adam / Cross-Entropy trainer over all networks
-    ├── evaluate.py             # Autoregressive sequence sampling + Diversity testing
-    ├── model_vanilla_rnn.py    # Standard Elman cell structure logic
-    ├── model_bilstm.py         # Advanced multi-gated Bidirectional module logic
-    ├── model_rnn_attention.py  # RNN + Scaled Dot-Product Masked Attention integration
-    └── TrainingNames.txt       # Raw curated dataset (1000 multiregional Indian entries)
+    ├── train.py                # [Core Trainer] Instantiates the chosen architecture, loads data via `utils.py`, and executes the PyTorch Adam/Cross-Entropy training loop with gradient clipping. Saves epoch checkpoints.
+    ├── evaluate.py             # [Generator] Loads trained weights and initiates autoregressive generation starting from an `<SOS>` token. Calculates Novelty and Diversity metrics dynamically via temperature-controlled sampling.
+    ├── model_vanilla_rnn.py    # [Architecture] Constructs a 2-layer stacked Elman RNN cell using explicit `nn.Linear` and `tanh` operations rather than `nn.RNN`.
+    ├── model_bilstm.py         # [Architecture] Implements a bidirectional LSTM encoder (forward/backward passes with 4 explicit gates: input, forget, output, candidate) feeding into a unidirectional LSTM decoder.
+    ├── model_rnn_attention.py  # [Architecture] Enhances the standard RNN loop with a scaled dot-product Causal Self-Attention head (using lower-triangular masking) to prevent mode collapse.
+    ├── utils.py                # [Data Logic] Contains the custom `NameDataset` class for character-to-index mapping, vocabulary building, padding sequences, and the batching collate function.
+    ├── TrainingNames.txt       # Core dataset consisting of 1,000 diverse curatoed Indian full names.
+    └── checkpoints/            # Auto-generated directory holding the saved `.pth` model weights.
 ```
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run: Step-by-Step Execution
 
-Ensure Python 3.10+ is available. We recommend keeping virtual environments localized.
+Ensure Python 3.10+ is available. We strongly recommend creating isolated virtual environments for each problem to prevent dependency conflicts (Problem 1 relies heavily on Gensim/NLTK, while Problem 2 requires PyTorch).
 
-### 1. Execute Problem 1 (Word2Vec)
+### 1. Problem 1: Word Representations (Word2Vec)
+*All commands must be executed sequentially from within the `Problem1/` directory.*
+
 ```bash
 cd Problem1
-python3 -m venv venv && source venv/bin/activate
+
+# 1. Initialize Environment
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 
-# Run sequentially:
-python scrape_data.py          # Harvest HTML/PDFs natively from IITJ domain
-python preprocess.py           # Compile strings into structured, analytical corpus
-python train_word2vec.py       # Render CBOW + SG Gensim representations rapidly
-python word2vec_scratch.py     # Validate math manually via NumPy framework
-python analysis.py             # Test nearest neighbours, 3CosAdd arithmetic
-python visualize.py            # Generate high-resolution PCA / t-SNE images
+# 2. Data Sourcing (~15-20 min)
+# Crawls the live IITJ website and extracts text from HTML and heavy academic PDFs.
+python scrape_data.py
+
+# 3. Text Processing (~1-2 min)
+# Cleans the noisy raw data, resolving regex artifacts and NLTK tokenization rules.
+# Outputs: corpus/cleaned_corpus.txt
+python preprocess.py
+
+# 4. Model Training: Gensim (~1-2 min)
+# Multithreaded deployment of Continuous Bag-of-Words and Skip-Gram models.
+# Outputs: 6 standard `.model` files in models/
+python train_word2vec.py
+
+# 5. Model Training: From-Scratch (~1 hour)
+# Mathematically trains the equivalent models using pure NumPy gradients. 
+# Note: Takes significantly longer due to non-C underlying compilation.
+python word2vec_scratch.py
+
+# 6. Evaluation & Analytics
+# Executes semantic analysis (Nearest Neighbours, Analogies) and generates the visual PNGs.
+python analysis.py
+python compare_models.py
+python visualize.py
 ```
 
-### 2. Execute Problem 2 (Character-Level Prediction)
+### 2. Problem 2: Character-Level Sequence Generation
+*All commands must be executed from within the `Problem2/` directory.*
+
 ```bash
 cd Problem2
-python3 -m venv venv && source venv/bin/activate
+
+# 1. Initialize Environment
+python3 -m venv venv
+source venv/bin/activate
 pip install torch tqdm matplotlib
 
-# Run Sequentially:
+# 2. Train the Architectures (~5-10 min per model)
+# Sequentially trains the Vanilla RNN, BiLSTM, and Causal Attention models.
+# Checkpoints will be continuously saved to checkpoints/
 python train.py --epochs 100 --batch_size 64 --lr 0.003
+
+# 3. Evaluate & Generate (~1-2 min)
+# Samples 1000 names autonomously from the trained `.pth` weights.
+# Automatically outputs evaluating statistics (Novelty, Diversity) to the terminal.
 python evaluate.py --samples 1000
 ```
 
