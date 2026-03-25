@@ -1,0 +1,207 @@
+{
+  "training_time": [
+    {
+      "model": "CBOW_A",
+      "gensim_sec": 2.9,
+      "scratch_sec": 230.21,
+      "speedup": 79.4
+    },
+    {
+      "model": "CBOW_B",
+      "gensim_sec": 3.07,
+      "scratch_sec": 234.33,
+      "speedup": 76.3
+    },
+    {
+      "model": "CBOW_C",
+      "gensim_sec": 4.98,
+      "scratch_sec": 320.41,
+      "speedup": 64.3
+    },
+    {
+      "model": "SG_A",
+      "gensim_sec": 4.55,
+      "scratch_sec": 618.84,
+      "speedup": 136.0
+    },
+    {
+      "model": "SG_B",
+      "gensim_sec": 10.14,
+      "scratch_sec": 1120.32,
+      "speedup": 110.5
+    },
+    {
+      "model": "SG_C",
+      "gensim_sec": 32.2,
+      "scratch_sec": 2275.91,
+      "speedup": 70.7
+    }
+  ],
+  "neighbour_comparison": {
+    "CBOW_B": {
+      "research": {
+        "gensim_top3": [
+          "projects",
+          "mapped",
+          "drdo"
+        ],
+        "scratch_top3": [
+          "knowledge",
+          "technologies",
+          "development"
+        ],
+        "overlap_top5": []
+      },
+      "student": {
+        "gensim_top3": [
+          "students",
+          "scholar",
+          "ordinary"
+        ],
+        "scratch_top3": [
+          "experience",
+          "number",
+          "campus"
+        ],
+        "overlap_top5": []
+      },
+      "phd": {
+        "gensim_top3": [
+          "fellowship",
+          "mmt",
+          "tcs"
+        ],
+        "scratch_top3": [
+          "using",
+          "standard",
+          "drug"
+        ],
+        "overlap_top5": []
+      },
+      "exam": {
+        "gensim_top3": [
+          "thinkers",
+          "tuesday",
+          "commissioned"
+        ],
+        "scratch_top3": [
+          "link",
+          "proliferation",
+          "interactive"
+        ],
+        "overlap_top5": []
+      }
+    },
+    "SG_B": {
+      "research": {
+        "gensim_top3": [
+          "undertaking",
+          "cant",
+          "signi"
+        ],
+        "scratch_top3": [
+          "development",
+          "materials",
+          "computer"
+        ],
+        "overlap_top5": []
+      },
+      "student": {
+        "gensim_top3": [
+          "rachit",
+          "recipients",
+          "aeromodeling"
+        ],
+        "scratch_top3": [
+          "evaluation",
+          "registration",
+          "related"
+        ],
+        "overlap_top5": []
+      },
+      "phd": {
+        "gensim_top3": [
+          "recipients",
+          "mtech",
+          "lovish"
+        ],
+        "scratch_top3": [
+          "division",
+          "faculty",
+          "coe"
+        ],
+        "overlap_top5": []
+      },
+      "exam": {
+        "gensim_top3": [
+          "syllabus",
+          "qualify",
+          "scripts"
+        ],
+        "scratch_top3": [
+          "convocation",
+          "questions",
+          "tab"
+        ],
+        "overlap_top5": [
+          "entrance"
+        ]
+      }
+    },
+    "SG_C": {
+      "research": {
+        "gensim_top3": [
+          "cbl",
+          "consultancies",
+          "signi"
+        ],
+        "scratch_top3": [
+          "areas",
+          "groups",
+          "applications"
+        ],
+        "overlap_top5": []
+      },
+      "student": {
+        "gensim_top3": [
+          "ticra",
+          "recipients",
+          "euraap"
+        ],
+        "scratch_top3": [
+          "awarded",
+          "first",
+          "part"
+        ],
+        "overlap_top5": []
+      },
+      "phd": {
+        "gensim_top3": [
+          "mtech",
+          "recipients",
+          "rachit"
+        ],
+        "scratch_top3": [
+          "fellowship",
+          "young",
+          "mathematics"
+        ],
+        "overlap_top5": []
+      },
+      "exam": {
+        "gensim_top3": [
+          "entrance",
+          "syllabus",
+          "anxiety"
+        ],
+        "scratch_top3": [
+          "download",
+          "finanical",
+          "trimester"
+        ],
+        "overlap_top5": []
+      }
+    }
+  },
+  "analogy_comparison": []
+}

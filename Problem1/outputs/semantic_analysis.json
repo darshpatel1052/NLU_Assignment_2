@@ -1,0 +1,1340 @@
+[
+  {
+    "model": "CBOW_A",
+    "architecture": "CBOW",
+    "vector_size": 50,
+    "vocab_size": 16990,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "projects",
+          "similarity": 0.5507
+        },
+        {
+          "word": "serb",
+          "similarity": 0.5154
+        },
+        {
+          "word": "thematic",
+          "similarity": 0.4956
+        },
+        {
+          "word": "isro",
+          "similarity": 0.4918
+        },
+        {
+          "word": "relation",
+          "similarity": 0.4758
+        }
+      ],
+      "student": [
+        {
+          "word": "students",
+          "similarity": 0.6435
+        },
+        {
+          "word": "scholar",
+          "similarity": 0.6105
+        },
+        {
+          "word": "allowed",
+          "similarity": 0.565
+        },
+        {
+          "word": "scholars",
+          "similarity": 0.5627
+        },
+        {
+          "word": "already",
+          "similarity": 0.5087
+        }
+      ],
+      "phd": [
+        {
+          "word": "got",
+          "similarity": 0.6542
+        },
+        {
+          "word": "fellowship",
+          "similarity": 0.6061
+        },
+        {
+          "word": "doctoral",
+          "similarity": 0.545
+        },
+        {
+          "word": "mmt",
+          "similarity": 0.522
+        },
+        {
+          "word": "prize",
+          "similarity": 0.5041
+        }
+      ],
+      "exam": [
+        {
+          "word": "uincept",
+          "similarity": 0.5585
+        },
+        {
+          "word": "line",
+          "similarity": 0.4921
+        },
+        {
+          "word": "eyes",
+          "similarity": 0.4883
+        },
+        {
+          "word": "thinkers",
+          "similarity": 0.4859
+        },
+        {
+          "word": "beneficiaries",
+          "similarity": 0.4773
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "steady",
+            "similarity": 0.5092
+          },
+          {
+            "word": "qualify",
+            "similarity": 0.4972
+          },
+          {
+            "word": "economical",
+            "similarity": 0.494
+          },
+          {
+            "word": "kalyani",
+            "similarity": 0.4901
+          },
+          {
+            "word": "petitioning",
+            "similarity": 0.4718
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "projects",
+            "similarity": 0.6916
+          },
+          {
+            "word": "already",
+            "similarity": 0.5229
+          },
+          {
+            "word": "teaching",
+            "similarity": 0.4858
+          },
+          {
+            "word": "encouraging",
+            "similarity": 0.4853
+          },
+          {
+            "word": "students",
+            "similarity": 0.4748
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "register",
+            "similarity": 0.645
+          },
+          {
+            "word": "continue",
+            "similarity": 0.6116
+          },
+          {
+            "word": "additional",
+            "similarity": 0.5889
+          },
+          {
+            "word": "write",
+            "similarity": 0.5469
+          },
+          {
+            "word": "credit",
+            "similarity": 0.543
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "breaks",
+            "similarity": 0.5303
+          },
+          {
+            "word": "grades",
+            "similarity": 0.4957
+          },
+          {
+            "word": "mid",
+            "similarity": 0.4898
+          },
+          {
+            "word": "vii",
+            "similarity": 0.4865
+          },
+          {
+            "word": "representing",
+            "similarity": 0.4848
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "hosting",
+            "similarity": 0.5444
+          },
+          {
+            "word": "postgraduate",
+            "similarity": 0.5139
+          },
+          {
+            "word": "ecole",
+            "similarity": 0.5096
+          },
+          {
+            "word": "specializations",
+            "similarity": 0.4875
+          },
+          {
+            "word": "astronomical",
+            "similarity": 0.4755
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "CBOW_B",
+    "architecture": "CBOW",
+    "vector_size": 100,
+    "vocab_size": 16990,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "projects",
+          "similarity": 0.4579
+        },
+        {
+          "word": "mapped",
+          "similarity": 0.3919
+        },
+        {
+          "word": "drdo",
+          "similarity": 0.3882
+        },
+        {
+          "word": "chemistry",
+          "similarity": 0.3668
+        },
+        {
+          "word": "ongoing",
+          "similarity": 0.3504
+        }
+      ],
+      "student": [
+        {
+          "word": "students",
+          "similarity": 0.4501
+        },
+        {
+          "word": "scholar",
+          "similarity": 0.3988
+        },
+        {
+          "word": "ordinary",
+          "similarity": 0.3874
+        },
+        {
+          "word": "curricular",
+          "similarity": 0.3747
+        },
+        {
+          "word": "scholars",
+          "similarity": 0.3699
+        }
+      ],
+      "phd": [
+        {
+          "word": "fellowship",
+          "similarity": 0.5473
+        },
+        {
+          "word": "mmt",
+          "similarity": 0.3966
+        },
+        {
+          "word": "tcs",
+          "similarity": 0.3668
+        },
+        {
+          "word": "scholar",
+          "similarity": 0.364
+        },
+        {
+          "word": "prestigious",
+          "similarity": 0.361
+        }
+      ],
+      "exam": [
+        {
+          "word": "thinkers",
+          "similarity": 0.4188
+        },
+        {
+          "word": "tuesday",
+          "similarity": 0.3806
+        },
+        {
+          "word": "commissioned",
+          "similarity": 0.3748
+        },
+        {
+          "word": "examination",
+          "similarity": 0.3746
+        },
+        {
+          "word": "indicon",
+          "similarity": 0.3626
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "applicant",
+            "similarity": 0.4089
+          },
+          {
+            "word": "malviya",
+            "similarity": 0.3842
+          },
+          {
+            "word": "petitioning",
+            "similarity": 0.3711
+          },
+          {
+            "word": "master",
+            "similarity": 0.3646
+          },
+          {
+            "word": "unsteady",
+            "similarity": 0.3512
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "mural",
+            "similarity": 0.3625
+          },
+          {
+            "word": "projects",
+            "similarity": 0.3548
+          },
+          {
+            "word": "secretaries",
+            "similarity": 0.3432
+          },
+          {
+            "word": "chosen",
+            "similarity": 0.3364
+          },
+          {
+            "word": "researchers",
+            "similarity": 0.3293
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "staff",
+            "similarity": 0.444
+          },
+          {
+            "word": "scientific",
+            "similarity": 0.3896
+          },
+          {
+            "word": "family",
+            "similarity": 0.3768
+          },
+          {
+            "word": "independent",
+            "similarity": 0.3706
+          },
+          {
+            "word": "spectral",
+            "similarity": 0.339
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "unsatisfactory",
+            "similarity": 0.3881
+          },
+          {
+            "word": "committeedisplay",
+            "similarity": 0.3812
+          },
+          {
+            "word": "advised",
+            "similarity": 0.3657
+          },
+          {
+            "word": "ferritic",
+            "similarity": 0.3369
+          },
+          {
+            "word": "moderation",
+            "similarity": 0.3343
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "postgraduate",
+            "similarity": 0.4458
+          },
+          {
+            "word": "masters",
+            "similarity": 0.4014
+          },
+          {
+            "word": "msc",
+            "similarity": 0.3882
+          },
+          {
+            "word": "scope",
+            "similarity": 0.3737
+          },
+          {
+            "word": "revamped",
+            "similarity": 0.3731
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "CBOW_C",
+    "architecture": "CBOW",
+    "vector_size": 200,
+    "vocab_size": 16990,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "researchers",
+          "similarity": 0.2762
+        },
+        {
+          "word": "projects",
+          "similarity": 0.2605
+        },
+        {
+          "word": "mapped",
+          "similarity": 0.2603
+        },
+        {
+          "word": "emerging",
+          "similarity": 0.2485
+        },
+        {
+          "word": "vidya",
+          "similarity": 0.2409
+        }
+      ],
+      "student": [
+        {
+          "word": "students",
+          "similarity": 0.3228
+        },
+        {
+          "word": "euraap",
+          "similarity": 0.2625
+        },
+        {
+          "word": "ticra",
+          "similarity": 0.261
+        },
+        {
+          "word": "prime",
+          "similarity": 0.254
+        },
+        {
+          "word": "prestigious",
+          "similarity": 0.2494
+        }
+      ],
+      "phd": [
+        {
+          "word": "fellowship",
+          "similarity": 0.3487
+        },
+        {
+          "word": "doctoral",
+          "similarity": 0.309
+        },
+        {
+          "word": "pursuing",
+          "similarity": 0.2854
+        },
+        {
+          "word": "shortlisted",
+          "similarity": 0.281
+        },
+        {
+          "word": "mmt",
+          "similarity": 0.2657
+        }
+      ],
+      "exam": [
+        {
+          "word": "aspire",
+          "similarity": 0.3662
+        },
+        {
+          "word": "thinkers",
+          "similarity": 0.3582
+        },
+        {
+          "word": "mandloi",
+          "similarity": 0.3325
+        },
+        {
+          "word": "anchored",
+          "similarity": 0.3285
+        },
+        {
+          "word": "commissioned",
+          "similarity": 0.3271
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "bhasha",
+            "similarity": 0.3087
+          },
+          {
+            "word": "petitioning",
+            "similarity": 0.3038
+          },
+          {
+            "word": "applicant",
+            "similarity": 0.3038
+          },
+          {
+            "word": "phenomics",
+            "similarity": 0.291
+          },
+          {
+            "word": "lens",
+            "similarity": 0.2789
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "aiot",
+            "similarity": 0.2514
+          },
+          {
+            "word": "emerging",
+            "similarity": 0.242
+          },
+          {
+            "word": "major",
+            "similarity": 0.2344
+          },
+          {
+            "word": "grss",
+            "similarity": 0.2339
+          },
+          {
+            "word": "curricular",
+            "similarity": 0.2167
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "staff",
+            "similarity": 0.3591
+          },
+          {
+            "word": "fractal",
+            "similarity": 0.2918
+          },
+          {
+            "word": "unsatisfactory",
+            "similarity": 0.2865
+          },
+          {
+            "word": "courses",
+            "similarity": 0.2769
+          },
+          {
+            "word": "siel",
+            "similarity": 0.2699
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "unsatisfactory",
+            "similarity": 0.3062
+          },
+          {
+            "word": "earned",
+            "similarity": 0.3022
+          },
+          {
+            "word": "average",
+            "similarity": 0.2948
+          },
+          {
+            "word": "grades",
+            "similarity": 0.2836
+          },
+          {
+            "word": "advised",
+            "similarity": 0.2807
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "departmental",
+            "similarity": 0.2974
+          },
+          {
+            "word": "kasnia",
+            "similarity": 0.2936
+          },
+          {
+            "word": "mca",
+            "similarity": 0.292
+          },
+          {
+            "word": "postgraduate",
+            "similarity": 0.2805
+          },
+          {
+            "word": "masters",
+            "similarity": 0.2735
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "SG_A",
+    "architecture": "Skip-gram",
+    "vector_size": 50,
+    "vocab_size": 16990,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "intelligences",
+          "similarity": 0.727
+        },
+        {
+          "word": "undertaking",
+          "similarity": 0.7195
+        },
+        {
+          "word": "projects",
+          "similarity": 0.707
+        },
+        {
+          "word": "carries",
+          "similarity": 0.7013
+        },
+        {
+          "word": "collaborative",
+          "similarity": 0.7006
+        }
+      ],
+      "student": [
+        {
+          "word": "crossed",
+          "similarity": 0.6413
+        },
+        {
+          "word": "students",
+          "similarity": 0.6395
+        },
+        {
+          "word": "presenting",
+          "similarity": 0.6023
+        },
+        {
+          "word": "counselling",
+          "similarity": 0.5964
+        },
+        {
+          "word": "counseling",
+          "similarity": 0.5915
+        }
+      ],
+      "phd": [
+        {
+          "word": "namanbaghel",
+          "similarity": 0.785
+        },
+        {
+          "word": "mtech",
+          "similarity": 0.7745
+        },
+        {
+          "word": "hennessy",
+          "similarity": 0.7522
+        },
+        {
+          "word": "visvesvaraya",
+          "similarity": 0.7512
+        },
+        {
+          "word": "visvesvarya",
+          "similarity": 0.7368
+        }
+      ],
+      "exam": [
+        {
+          "word": "syllabus",
+          "similarity": 0.7862
+        },
+        {
+          "word": "outputs",
+          "similarity": 0.7378
+        },
+        {
+          "word": "scripts",
+          "similarity": 0.7332
+        },
+        {
+          "word": "fulfillment",
+          "similarity": 0.7289
+        },
+        {
+          "word": "entrance",
+          "similarity": 0.7268
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "master",
+            "similarity": 0.7184
+          },
+          {
+            "word": "redirecttologinpage",
+            "similarity": 0.7104
+          },
+          {
+            "word": "applicant",
+            "similarity": 0.6914
+          },
+          {
+            "word": "copybook",
+            "similarity": 0.6692
+          },
+          {
+            "word": "waiting",
+            "similarity": 0.6665
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "fellowships",
+            "similarity": 0.5838
+          },
+          {
+            "word": "copies",
+            "similarity": 0.5829
+          },
+          {
+            "word": "counseling",
+            "similarity": 0.5782
+          },
+          {
+            "word": "upon",
+            "similarity": 0.576
+          },
+          {
+            "word": "accepting",
+            "similarity": 0.574
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "broaden",
+            "similarity": 0.6183
+          },
+          {
+            "word": "tutorials",
+            "similarity": 0.6118
+          },
+          {
+            "word": "courses",
+            "similarity": 0.6038
+          },
+          {
+            "word": "horizons",
+            "similarity": 0.5907
+          },
+          {
+            "word": "instructor",
+            "similarity": 0.5878
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "letter",
+            "similarity": 0.6286
+          },
+          {
+            "word": "averages",
+            "similarity": 0.6195
+          },
+          {
+            "word": "cumulative",
+            "similarity": 0.5943
+          },
+          {
+            "word": "awarded",
+            "similarity": 0.5903
+          },
+          {
+            "word": "dgpa",
+            "similarity": 0.5792
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "graduate",
+            "similarity": 0.7431
+          },
+          {
+            "word": "postgraduate",
+            "similarity": 0.6768
+          },
+          {
+            "word": "program",
+            "similarity": 0.6713
+          },
+          {
+            "word": "attributes",
+            "similarity": 0.6666
+          },
+          {
+            "word": "bouquet",
+            "similarity": 0.6597
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "SG_B",
+    "architecture": "Skip-gram",
+    "vector_size": 100,
+    "vocab_size": 16990,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "undertaking",
+          "similarity": 0.6514
+        },
+        {
+          "word": "cant",
+          "similarity": 0.6484
+        },
+        {
+          "word": "signi",
+          "similarity": 0.6434
+        },
+        {
+          "word": "cie",
+          "similarity": 0.6398
+        },
+        {
+          "word": "worthy",
+          "similarity": 0.6196
+        }
+      ],
+      "student": [
+        {
+          "word": "rachit",
+          "similarity": 0.5496
+        },
+        {
+          "word": "recipients",
+          "similarity": 0.5491
+        },
+        {
+          "word": "aeromodeling",
+          "similarity": 0.5471
+        },
+        {
+          "word": "ably",
+          "similarity": 0.537
+        },
+        {
+          "word": "elections",
+          "similarity": 0.5368
+        }
+      ],
+      "phd": [
+        {
+          "word": "recipients",
+          "similarity": 0.6885
+        },
+        {
+          "word": "mtech",
+          "similarity": 0.6804
+        },
+        {
+          "word": "lovish",
+          "similarity": 0.6774
+        },
+        {
+          "word": "namanbaghel",
+          "similarity": 0.6647
+        },
+        {
+          "word": "rachit",
+          "similarity": 0.6438
+        }
+      ],
+      "exam": [
+        {
+          "word": "syllabus",
+          "similarity": 0.7275
+        },
+        {
+          "word": "qualify",
+          "similarity": 0.7106
+        },
+        {
+          "word": "scripts",
+          "similarity": 0.6867
+        },
+        {
+          "word": "entrance",
+          "similarity": 0.6788
+        },
+        {
+          "word": "screened",
+          "similarity": 0.6623
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "icwa",
+            "similarity": 0.6046
+          },
+          {
+            "word": "iti",
+            "similarity": 0.6037
+          },
+          {
+            "word": "applicant",
+            "similarity": 0.5588
+          },
+          {
+            "word": "mca",
+            "similarity": 0.556
+          },
+          {
+            "word": "diplomas",
+            "similarity": 0.5558
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "worth",
+            "similarity": 0.4975
+          },
+          {
+            "word": "extramural",
+            "similarity": 0.4948
+          },
+          {
+            "word": "indicated",
+            "similarity": 0.4882
+          },
+          {
+            "word": "pmrf",
+            "similarity": 0.4731
+          },
+          {
+            "word": "minute",
+            "similarity": 0.4723
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "interestunder",
+            "similarity": 0.4933
+          },
+          {
+            "word": "maturity",
+            "similarity": 0.4891
+          },
+          {
+            "word": "anindependent",
+            "similarity": 0.4855
+          },
+          {
+            "word": "members",
+            "similarity": 0.4829
+          },
+          {
+            "word": "courseare",
+            "similarity": 0.4791
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "averages",
+            "similarity": 0.4914
+          },
+          {
+            "word": "cutoff",
+            "similarity": 0.4912
+          },
+          {
+            "word": "transcript",
+            "similarity": 0.4879
+          },
+          {
+            "word": "thewithdrawn",
+            "similarity": 0.4844
+          },
+          {
+            "word": "dgpa",
+            "similarity": 0.4836
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "masters",
+            "similarity": 0.5581
+          },
+          {
+            "word": "bouquet",
+            "similarity": 0.5457
+          },
+          {
+            "word": "graduate",
+            "similarity": 0.536
+          },
+          {
+            "word": "postgraduate",
+            "similarity": 0.5248
+          },
+          {
+            "word": "core",
+            "similarity": 0.5032
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "SG_C",
+    "architecture": "Skip-gram",
+    "vector_size": 200,
+    "vocab_size": 16990,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "cbl",
+          "similarity": 0.541
+        },
+        {
+          "word": "consultancies",
+          "similarity": 0.5303
+        },
+        {
+          "word": "signi",
+          "similarity": 0.5263
+        },
+        {
+          "word": "cie",
+          "similarity": 0.524
+        },
+        {
+          "word": "omd",
+          "similarity": 0.521
+        }
+      ],
+      "student": [
+        {
+          "word": "ticra",
+          "similarity": 0.5105
+        },
+        {
+          "word": "recipients",
+          "similarity": 0.5088
+        },
+        {
+          "word": "euraap",
+          "similarity": 0.5049
+        },
+        {
+          "word": "namanbaghel",
+          "similarity": 0.4945
+        },
+        {
+          "word": "aeromodeling",
+          "similarity": 0.4845
+        }
+      ],
+      "phd": [
+        {
+          "word": "mtech",
+          "similarity": 0.5916
+        },
+        {
+          "word": "recipients",
+          "similarity": 0.5436
+        },
+        {
+          "word": "rachit",
+          "similarity": 0.5316
+        },
+        {
+          "word": "namanbaghel",
+          "similarity": 0.5296
+        },
+        {
+          "word": "doc",
+          "similarity": 0.5222
+        }
+      ],
+      "exam": [
+        {
+          "word": "entrance",
+          "similarity": 0.5971
+        },
+        {
+          "word": "syllabus",
+          "similarity": 0.5833
+        },
+        {
+          "word": "anxiety",
+          "similarity": 0.5589
+        },
+        {
+          "word": "qualify",
+          "similarity": 0.548
+        },
+        {
+          "word": "missed",
+          "similarity": 0.545
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "icwa",
+            "similarity": 0.5095
+          },
+          {
+            "word": "iti",
+            "similarity": 0.5019
+          },
+          {
+            "word": "programs",
+            "similarity": 0.4511
+          },
+          {
+            "word": "applicant",
+            "similarity": 0.4405
+          },
+          {
+            "word": "dcs",
+            "similarity": 0.4363
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "aeromodeling",
+            "similarity": 0.4202
+          },
+          {
+            "word": "extramural",
+            "similarity": 0.4171
+          },
+          {
+            "word": "activites",
+            "similarity": 0.411
+          },
+          {
+            "word": "erasmus",
+            "similarity": 0.4038
+          },
+          {
+            "word": "handled",
+            "similarity": 0.4029
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "interestunder",
+            "similarity": 0.4532
+          },
+          {
+            "word": "practicals",
+            "similarity": 0.4151
+          },
+          {
+            "word": "appropriaterecommendation",
+            "similarity": 0.4111
+          },
+          {
+            "word": "supervise",
+            "similarity": 0.4107
+          },
+          {
+            "word": "courseare",
+            "similarity": 0.4034
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "thewithdrawn",
+            "similarity": 0.4557
+          },
+          {
+            "word": "averages",
+            "similarity": 0.4383
+          },
+          {
+            "word": "dgpa",
+            "similarity": 0.426
+          },
+          {
+            "word": "allocate",
+            "similarity": 0.4083
+          },
+          {
+            "word": "cutoff",
+            "similarity": 0.408
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "postgraduate",
+            "similarity": 0.4326
+          },
+          {
+            "word": "graduate",
+            "similarity": 0.4137
+          },
+          {
+            "word": "masters",
+            "similarity": 0.4109
+          },
+          {
+            "word": "miles",
+            "similarity": 0.3881
+          },
+          {
+            "word": "fransico",
+            "similarity": 0.3783
+          }
+        ]
+      }
+    ]
+  }
+]

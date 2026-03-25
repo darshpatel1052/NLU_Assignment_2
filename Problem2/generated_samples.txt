@@ -1,0 +1,55 @@
+Using device: cuda
+
+Evaluating Vanilla RNN...
+
+--- 10 Representative Samples from Vanilla RNN ---
+1. Dhanana Gowda
+2. Ishaon Kangan
+3. Balumaram Turanish
+4. Chevdra Varijana
+5. Isha Agchan
+6. Thilakumar Musharla
+7. Sokar Bharthen
+8. Mohanna Dhunder
+9. Madhuk Bhoreel
+10. Poomi Redhu
+
+--- Metrics for Vanilla RNN ---
+Novelty Rate: 99.50%
+Diversity:    0.9990 (999 unique out of 1000)
+
+Evaluating Bidirectional LSTM...
+
+--- 10 Representative Samples from Bidirectional LSTM ---
+1. Bhoonondath Sen
+2. Duldeep Karsan
+3. Ashiq Achande
+4. Dhanasamban Kannasime
+5. Devansh Tuper
+6. Chandrasekaran Rajeshnan
+7. Parthasarath Shah
+8. Arunachalam Tharsan
+9. Vedakuman Chandrasieman
+10. Ilyasuarav Singh
+
+--- Metrics for Bidirectional LSTM ---
+Novelty Rate: 90.80%
+Diversity:    0.9830 (983 unique out of 1000)
+
+Evaluating RNN with Attention...
+
+--- 10 Representative Samples from RNN with Attention ---
+1. Pankaj Kumar
+2. Karishma Vanikam
+3. Saurabh Jaiswat
+4. Ishaj Masank
+5. Onian Rajkumar
+6. Balati Gukta
+7. Jeraish Kumar
+8. Viswani Pondes
+9. Ashwi Hasshi
+10. Sowanvi Sharma
+
+--- Metrics for RNN with Attention ---
+Novelty Rate: 98.20%
+Diversity:    0.9960 (996 unique out of 1000)

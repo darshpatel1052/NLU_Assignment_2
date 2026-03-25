@@ -1,0 +1,414 @@
+{
+  "total_documents": 51,
+  "total_sentences": 26123,
+  "total_tokens": 450793,
+  "vocabulary_size": 27241,
+  "top_50_words": [
+    [
+      "institute",
+      4468
+    ],
+    [
+      "research",
+      4116
+    ],
+    [
+      "engineering",
+      3835
+    ],
+    [
+      "technology",
+      3094
+    ],
+    [
+      "students",
+      2981
+    ],
+    [
+      "professor",
+      2889
+    ],
+    [
+      "department",
+      2202
+    ],
+    [
+      "regular",
+      2200
+    ],
+    [
+      "science",
+      2176
+    ],
+    [
+      "student",
+      2133
+    ],
+    [
+      "assistant",
+      1992
+    ],
+    [
+      "indian",
+      1836
+    ],
+    [
+      "kumar",
+      1814
+    ],
+    [
+      "yes",
+      1757
+    ],
+    [
+      "academic",
+      1652
+    ],
+    [
+      "project",
+      1599
+    ],
+    [
+      "india",
+      1584
+    ],
+    [
+      "faculty",
+      1533
+    ],
+    [
+      "program",
+      1506
+    ],
+    [
+      "development",
+      1489
+    ],
+    [
+      "male",
+      1488
+    ],
+    [
+      "systems",
+      1309
+    ],
+    [
+      "based",
+      1183
+    ],
+    [
+      "office",
+      1117
+    ],
+    [
+      "year",
+      1103
+    ],
+    [
+      "international",
+      1089
+    ],
+    [
+      "annual",
+      1064
+    ],
+    [
+      "computer",
+      1047
+    ],
+    [
+      "singh",
+      1047
+    ],
+    [
+      "members",
+      1040
+    ],
+    [
+      "report",
+      1025
+    ],
+    [
+      "infrastructure",
+      996
+    ],
+    [
+      "design",
+      994
+    ],
+    [
+      "data",
+      964
+    ],
+    [
+      "information",
+      959
+    ],
+    [
+      "school",
+      955
+    ],
+    [
+      "materials",
+      954
+    ],
+    [
+      "center",
+      952
+    ],
+    [
+      "digital",
+      951
+    ],
+    [
+      "time",
+      947
+    ],
+    [
+      "course",
+      946
+    ],
+    [
+      "degree",
+      933
+    ],
+    [
+      "lab",
+      917
+    ],
+    [
+      "energy",
+      886
+    ],
+    [
+      "system",
+      885
+    ],
+    [
+      "date",
+      877
+    ],
+    [
+      "conference",
+      864
+    ],
+    [
+      "programs",
+      862
+    ],
+    [
+      "associate",
+      830
+    ],
+    [
+      "new",
+      830
+    ]
+  ],
+  "per_document": {
+    "iitj_html_all.txt": {
+      "sentences": 3873,
+      "tokens": 72876
+    },
+    "pdf__download_file_.txt": {
+      "sentences": 66,
+      "tokens": 643
+    },
+    "pdf_academic_regulations_ms_research_2023.txt": {
+      "sentences": 72,
+      "tokens": 865
+    },
+    "pdf_academic_regulations_pg_2022.txt": {
+      "sentences": 534,
+      "tokens": 6268
+    },
+    "pdf_academic_regulations_ug_2019.txt": {
+      "sentences": 658,
+      "tokens": 7680
+    },
+    "pdf_amendment____revised_norms_for_continuation_of_program_assis.txt": {
+      "sentences": 4,
+      "tokens": 68
+    },
+    "pdf_annual_report_2008_09.txt": {
+      "sentences": 176,
+      "tokens": 2194
+    },
+    "pdf_annual_report_2009_10.txt": {
+      "sentences": 167,
+      "tokens": 2812
+    },
+    "pdf_annual_report_2011_12.txt": {
+      "sentences": 902,
+      "tokens": 14858
+    },
+    "pdf_annual_report_2018_19.txt": {
+      "sentences": 1637,
+      "tokens": 20184
+    },
+    "pdf_annual_report_2019_20.txt": {
+      "sentences": 2985,
+      "tokens": 37924
+    },
+    "pdf_annual_report_2021_22.txt": {
+      "sentences": 5395,
+      "tokens": 86707
+    },
+    "pdf_annual_report_2022_23.txt": {
+      "sentences": 3487,
+      "tokens": 61564
+    },
+    "pdf_annual_report_2023_24.txt": {
+      "sentences": 1651,
+      "tokens": 28301
+    },
+    "pdf_b_tech___ai_and_data_science_.txt": {
+      "sentences": 3,
+      "tokens": 155
+    },
+    "pdf_b_tech___bioengineering_.txt": {
+      "sentences": 5,
+      "tokens": 181
+    },
+    "pdf_b_tech___chemical_engineering_.txt": {
+      "sentences": 5,
+      "tokens": 215
+    },
+    "pdf_b_tech___civil_and_infrastructure_engineering_.txt": {
+      "sentences": 3,
+      "tokens": 158
+    },
+    "pdf_b_tech___computer_science___engineering_.txt": {
+      "sentences": 5,
+      "tokens": 184
+    },
+    "pdf_b_tech___electrical_engineering_.txt": {
+      "sentences": 7,
+      "tokens": 180
+    },
+    "pdf_b_tech___materials_engineering_.txt": {
+      "sentences": 3,
+      "tokens": 180
+    },
+    "pdf_b_tech___mechanical_engineering_.txt": {
+      "sentences": 3,
+      "tokens": 185
+    },
+    "pdf_civil_dept_brochure.txt": {
+      "sentences": 37,
+      "tokens": 754
+    },
+    "pdf_consultancy_project_detail.txt": {
+      "sentences": 5,
+      "tokens": 333
+    },
+    "pdf_details_of_scholarship_fellowship_interest_subsidy_fee_remib.txt": {
+      "sentences": 18,
+      "tokens": 334
+    },
+    "pdf_download_file.txt": {
+      "sentences": 32,
+      "tokens": 1176
+    },
+    "pdf_engineering.txt": {
+      "sentences": 29,
+      "tokens": 2209
+    },
+    "pdf_english.txt": {
+      "sentences": 1554,
+      "tokens": 15131
+    },
+    "pdf_entrepreneurship.txt": {
+      "sentences": 1,
+      "tokens": 92
+    },
+    "pdf_hindi.txt": {
+      "sentences": 19,
+      "tokens": 12599
+    },
+    "pdf_iit_amendment_act_2012.txt": {
+      "sentences": 7,
+      "tokens": 131
+    },
+    "pdf_iit_jodhpur_s_nirf_data_for_the_year_2024_engineering.txt": {
+      "sentences": 29,
+      "tokens": 2316
+    },
+    "pdf_iit_jodhpur_s_nirf_data_for_the_year_2024_overall.txt": {
+      "sentences": 38,
+      "tokens": 2438
+    },
+    "pdf_iitj_first_statutes.txt": {
+      "sentences": 522,
+      "tokens": 8030
+    },
+    "pdf_imrg_guideline.txt": {
+      "sentences": 32,
+      "tokens": 368
+    },
+    "pdf_indian_institute_of_technology_jodhpur__at_a_glance.txt": {
+      "sentences": 44,
+      "tokens": 955
+    },
+    "pdf_innovation.txt": {
+      "sentences": 36,
+      "tokens": 2753
+    },
+    "pdf_institute_brochure_for_prospective_faculty.txt": {
+      "sentences": 271,
+      "tokens": 3161
+    },
+    "pdf_institute_chronological_development.txt": {
+      "sentences": 16,
+      "tokens": 244
+    },
+    "pdf_ipr_policy.txt": {
+      "sentences": 161,
+      "tokens": 3433
+    },
+    "pdf_ipr_policy__december_2019_.txt": {
+      "sentences": 161,
+      "tokens": 3433
+    },
+    "pdf_management.txt": {
+      "sentences": 25,
+      "tokens": 652
+    },
+    "pdf_nirf_2025_engineering.txt": {
+      "sentences": 35,
+      "tokens": 2751
+    },
+    "pdf_nirf_2025_overall.txt": {
+      "sentences": 57,
+      "tokens": 2982
+    },
+    "pdf_overall.txt": {
+      "sentences": 51,
+      "tokens": 2475
+    },
+    "pdf_placement_brochure.txt": {
+      "sentences": 96,
+      "tokens": 1939
+    },
+    "pdf_project.txt": {
+      "sentences": 89,
+      "tokens": 19240
+    },
+    "pdf_rd_norms_2018.txt": {
+      "sentences": 411,
+      "tokens": 6538
+    },
+    "pdf_regulations_for_joint_programmes_in_medical_technologies.txt": {
+      "sentences": 25,
+      "tokens": 448
+    },
+    "pdf_regulations_for_students_enrolled_from_july_2021_onwards.txt": {
+      "sentences": 658,
+      "tokens": 7680
+    },
+    "pdf_sponsored_research_detail.txt": {
+      "sentences": 23,
+      "tokens": 1816
+    }
+  }
+}

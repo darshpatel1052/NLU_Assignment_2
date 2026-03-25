@@ -1,0 +1,134 @@
+[
+  {
+    "name": "CBOW_A",
+    "architecture": "CBOW",
+    "vector_size": 50,
+    "window": 3,
+    "negative_samples": 0,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 2.9,
+    "probe_words_in_vocab": [
+      "research",
+      "student",
+      "phd",
+      "exam",
+      "faculty",
+      "department",
+      "course",
+      "professor",
+      "academic"
+    ],
+    "model_path": "models/CBOW_A.model"
+  },
+  {
+    "name": "CBOW_B",
+    "architecture": "CBOW",
+    "vector_size": 100,
+    "window": 5,
+    "negative_samples": 0,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 3.07,
+    "probe_words_in_vocab": [
+      "research",
+      "student",
+      "phd",
+      "exam",
+      "faculty",
+      "department",
+      "course",
+      "professor",
+      "academic"
+    ],
+    "model_path": "models/CBOW_B.model"
+  },
+  {
+    "name": "CBOW_C",
+    "architecture": "CBOW",
+    "vector_size": 200,
+    "window": 7,
+    "negative_samples": 0,
+    "epochs": 20,
+    "vocab_size": 16990,
+    "training_time_sec": 4.98,
+    "probe_words_in_vocab": [
+      "research",
+      "student",
+      "phd",
+      "exam",
+      "faculty",
+      "department",
+      "course",
+      "professor",
+      "academic"
+    ],
+    "model_path": "models/CBOW_C.model"
+  },
+  {
+    "name": "SG_A",
+    "architecture": "Skip-gram",
+    "vector_size": 50,
+    "window": 3,
+    "negative_samples": 5,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 4.55,
+    "probe_words_in_vocab": [
+      "research",
+      "student",
+      "phd",
+      "exam",
+      "faculty",
+      "department",
+      "course",
+      "professor",
+      "academic"
+    ],
+    "model_path": "models/SG_A.model"
+  },
+  {
+    "name": "SG_B",
+    "architecture": "Skip-gram",
+    "vector_size": 100,
+    "window": 5,
+    "negative_samples": 10,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 10.14,
+    "probe_words_in_vocab": [
+      "research",
+      "student",
+      "phd",
+      "exam",
+      "faculty",
+      "department",
+      "course",
+      "professor",
+      "academic"
+    ],
+    "model_path": "models/SG_B.model"
+  },
+  {
+    "name": "SG_C",
+    "architecture": "Skip-gram",
+    "vector_size": 200,
+    "window": 7,
+    "negative_samples": 15,
+    "epochs": 20,
+    "vocab_size": 16990,
+    "training_time_sec": 32.2,
+    "probe_words_in_vocab": [
+      "research",
+      "student",
+      "phd",
+      "exam",
+      "faculty",
+      "department",
+      "course",
+      "professor",
+      "academic"
+    ],
+    "model_path": "models/SG_C.model"
+  }
+]

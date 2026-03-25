@@ -1,0 +1,1364 @@
+[
+  {
+    "name": "CBOW_A",
+    "type": "cbow",
+    "vector_size": 50,
+    "window": 3,
+    "negative": 5,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 230.21,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "lab",
+          "similarity": 0.9983
+        },
+        {
+          "word": "design",
+          "similarity": 0.9981
+        },
+        {
+          "word": "data",
+          "similarity": 0.998
+        },
+        {
+          "word": "based",
+          "similarity": 0.998
+        },
+        {
+          "word": "environmental",
+          "similarity": 0.9977
+        }
+      ],
+      "student": [
+        {
+          "word": "explores",
+          "similarity": 0.9982
+        },
+        {
+          "word": "faculties",
+          "similarity": 0.9981
+        },
+        {
+          "word": "community",
+          "similarity": 0.9981
+        },
+        {
+          "word": "written",
+          "similarity": 0.9981
+        },
+        {
+          "word": "organization",
+          "similarity": 0.998
+        }
+      ],
+      "phd": [
+        {
+          "word": "arya",
+          "similarity": 0.9991
+        },
+        {
+          "word": "duchenne",
+          "similarity": 0.9991
+        },
+        {
+          "word": "kvksa",
+          "similarity": 0.999
+        },
+        {
+          "word": "sikkim",
+          "similarity": 0.999
+        },
+        {
+          "word": "gsa",
+          "similarity": 0.999
+        }
+      ],
+      "exam": [
+        {
+          "word": "measurement",
+          "similarity": 0.9989
+        },
+        {
+          "word": "grapes",
+          "similarity": 0.9988
+        },
+        {
+          "word": "jktw",
+          "similarity": 0.9988
+        },
+        {
+          "word": "showing",
+          "similarity": 0.9988
+        },
+        {
+          "word": "changing",
+          "similarity": 0.9988
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "minute",
+            "similarity": 0.9928
+          },
+          {
+            "word": "mater",
+            "similarity": 0.9928
+          },
+          {
+            "word": "invite",
+            "similarity": 0.9928
+          },
+          {
+            "word": "microfluidics",
+            "similarity": 0.9926
+          },
+          {
+            "word": "graphical",
+            "similarity": 0.9925
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "mea",
+            "similarity": 0.4958
+          },
+          {
+            "word": "fydrych",
+            "similarity": 0.4854
+          },
+          {
+            "word": "tapesh",
+            "similarity": 0.477
+          },
+          {
+            "word": "students",
+            "similarity": 0.473
+          },
+          {
+            "word": "intelligence",
+            "similarity": 0.4722
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "exchange",
+            "similarity": 0.9949
+          },
+          {
+            "word": "students",
+            "similarity": 0.9947
+          },
+          {
+            "word": "calculation",
+            "similarity": 0.994
+          },
+          {
+            "word": "laboratory",
+            "similarity": 0.9937
+          },
+          {
+            "word": "year",
+            "similarity": 0.9937
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "student",
+            "similarity": 0.9949
+          },
+          {
+            "word": "earned",
+            "similarity": 0.994
+          },
+          {
+            "word": "completed",
+            "similarity": 0.9938
+          },
+          {
+            "word": "minute",
+            "similarity": 0.9936
+          },
+          {
+            "word": "criteria",
+            "similarity": 0.9935
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "launch",
+            "similarity": 0.9976
+          },
+          {
+            "word": "turbulent",
+            "similarity": 0.9973
+          },
+          {
+            "word": "learned",
+            "similarity": 0.9973
+          },
+          {
+            "word": "foster",
+            "similarity": 0.9971
+          },
+          {
+            "word": "govindaraju",
+            "similarity": 0.997
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CBOW_B",
+    "type": "cbow",
+    "vector_size": 100,
+    "window": 5,
+    "negative": 5,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 234.33,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "knowledge",
+          "similarity": 0.9992
+        },
+        {
+          "word": "technologies",
+          "similarity": 0.9991
+        },
+        {
+          "word": "development",
+          "similarity": 0.9991
+        },
+        {
+          "word": "center",
+          "similarity": 0.9991
+        },
+        {
+          "word": "systems",
+          "similarity": 0.999
+        }
+      ],
+      "student": [
+        {
+          "word": "experience",
+          "similarity": 0.999
+        },
+        {
+          "word": "number",
+          "similarity": 0.999
+        },
+        {
+          "word": "campus",
+          "similarity": 0.999
+        },
+        {
+          "word": "quality",
+          "similarity": 0.9989
+        },
+        {
+          "word": "leave",
+          "similarity": 0.9989
+        }
+      ],
+      "phd": [
+        {
+          "word": "using",
+          "similarity": 0.9995
+        },
+        {
+          "word": "standard",
+          "similarity": 0.9995
+        },
+        {
+          "word": "drug",
+          "similarity": 0.9995
+        },
+        {
+          "word": "sahoo",
+          "similarity": 0.9995
+        },
+        {
+          "word": "kekz",
+          "similarity": 0.9995
+        }
+      ],
+      "exam": [
+        {
+          "word": "link",
+          "similarity": 0.999
+        },
+        {
+          "word": "proliferation",
+          "similarity": 0.999
+        },
+        {
+          "word": "interactive",
+          "similarity": 0.9989
+        },
+        {
+          "word": "accessible",
+          "similarity": 0.9989
+        },
+        {
+          "word": "finance",
+          "similarity": 0.9989
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "health",
+            "similarity": 0.997
+          },
+          {
+            "word": "hypermucoviscosity",
+            "similarity": 0.997
+          },
+          {
+            "word": "servoing",
+            "similarity": 0.997
+          },
+          {
+            "word": "manufactured",
+            "similarity": 0.997
+          },
+          {
+            "word": "vaccination",
+            "similarity": 0.997
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "institute",
+            "similarity": 0.6061
+          },
+          {
+            "word": "qualify",
+            "similarity": 0.6007
+          },
+          {
+            "word": "india",
+            "similarity": 0.5836
+          },
+          {
+            "word": "program",
+            "similarity": 0.5835
+          },
+          {
+            "word": "hokkaido",
+            "similarity": 0.5825
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "student",
+            "similarity": 0.9981
+          },
+          {
+            "word": "number",
+            "similarity": 0.9979
+          },
+          {
+            "word": "study",
+            "similarity": 0.9978
+          },
+          {
+            "word": "experience",
+            "similarity": 0.9977
+          },
+          {
+            "word": "admission",
+            "similarity": 0.9976
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "compulsory",
+            "similarity": 0.9975
+          },
+          {
+            "word": "archiving",
+            "similarity": 0.9974
+          },
+          {
+            "word": "weeks",
+            "similarity": 0.9974
+          },
+          {
+            "word": "custodian",
+            "similarity": 0.9974
+          },
+          {
+            "word": "grades",
+            "similarity": 0.9974
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "services",
+            "similarity": 0.9985
+          },
+          {
+            "word": "started",
+            "similarity": 0.9984
+          },
+          {
+            "word": "admission",
+            "similarity": 0.9984
+          },
+          {
+            "word": "technologies",
+            "similarity": 0.9984
+          },
+          {
+            "word": "feel",
+            "similarity": 0.9984
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CBOW_C",
+    "type": "cbow",
+    "vector_size": 200,
+    "window": 7,
+    "negative": 5,
+    "epochs": 20,
+    "vocab_size": 16990,
+    "training_time_sec": 320.41,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "technologies",
+          "similarity": 0.9985
+        },
+        {
+          "word": "programs",
+          "similarity": 0.9984
+        },
+        {
+          "word": "activities",
+          "similarity": 0.9983
+        },
+        {
+          "word": "intelligence",
+          "similarity": 0.998
+        },
+        {
+          "word": "laboratory",
+          "similarity": 0.9979
+        }
+      ],
+      "student": [
+        {
+          "word": "credits",
+          "similarity": 0.9987
+        },
+        {
+          "word": "students",
+          "similarity": 0.9983
+        },
+        {
+          "word": "requirements",
+          "similarity": 0.9983
+        },
+        {
+          "word": "earned",
+          "similarity": 0.9981
+        },
+        {
+          "word": "semester",
+          "similarity": 0.9979
+        }
+      ],
+      "phd": [
+        {
+          "word": "top",
+          "similarity": 0.9995
+        },
+        {
+          "word": "mobility",
+          "similarity": 0.9994
+        },
+        {
+          "word": "structure",
+          "similarity": 0.9994
+        },
+        {
+          "word": "tools",
+          "similarity": 0.9994
+        },
+        {
+          "word": "important",
+          "similarity": 0.9994
+        }
+      ],
+      "exam": [
+        {
+          "word": "questions",
+          "similarity": 0.9994
+        },
+        {
+          "word": "works",
+          "similarity": 0.9994
+        },
+        {
+          "word": "send",
+          "similarity": 0.9994
+        },
+        {
+          "word": "sample",
+          "similarity": 0.9994
+        },
+        {
+          "word": "old",
+          "similarity": 0.9993
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "applicant",
+            "similarity": 0.9977
+          },
+          {
+            "word": "agricultural",
+            "similarity": 0.9973
+          },
+          {
+            "word": "pharmacy",
+            "similarity": 0.9973
+          },
+          {
+            "word": "scale",
+            "similarity": 0.9972
+          },
+          {
+            "word": "ews",
+            "similarity": 0.9971
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "cdh",
+            "similarity": 0.4308
+          },
+          {
+            "word": "institute",
+            "similarity": 0.4133
+          },
+          {
+            "word": "digital",
+            "similarity": 0.3824
+          },
+          {
+            "word": "infrastructure",
+            "similarity": 0.3712
+          },
+          {
+            "word": "difractometer",
+            "similarity": 0.3703
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "academic",
+            "similarity": 0.9937
+          },
+          {
+            "word": "program",
+            "similarity": 0.9923
+          },
+          {
+            "word": "requirements",
+            "similarity": 0.9892
+          },
+          {
+            "word": "students",
+            "similarity": 0.9871
+          },
+          {
+            "word": "year",
+            "similarity": 0.9868
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "student",
+            "similarity": 0.998
+          },
+          {
+            "word": "earned",
+            "similarity": 0.9978
+          },
+          {
+            "word": "credits",
+            "similarity": 0.9975
+          },
+          {
+            "word": "courses",
+            "similarity": 0.9973
+          },
+          {
+            "word": "course",
+            "similarity": 0.9973
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "innovation",
+            "similarity": 0.9988
+          },
+          {
+            "word": "design",
+            "similarity": 0.9988
+          },
+          {
+            "word": "healthcare",
+            "similarity": 0.9987
+          },
+          {
+            "word": "admission",
+            "similarity": 0.9987
+          },
+          {
+            "word": "robotics",
+            "similarity": 0.9987
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SG_A",
+    "type": "skipgram",
+    "vector_size": 50,
+    "window": 3,
+    "negative": 5,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 618.84,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "materials",
+          "similarity": 0.9907
+        },
+        {
+          "word": "foresight",
+          "similarity": 0.9891
+        },
+        {
+          "word": "abhiyan",
+          "similarity": 0.9887
+        },
+        {
+          "word": "manufacturing",
+          "similarity": 0.9886
+        },
+        {
+          "word": "applications",
+          "similarity": 0.9882
+        }
+      ],
+      "student": [
+        {
+          "word": "maximum",
+          "similarity": 0.9945
+        },
+        {
+          "word": "average",
+          "similarity": 0.9943
+        },
+        {
+          "word": "credit",
+          "similarity": 0.9936
+        },
+        {
+          "word": "programme",
+          "similarity": 0.9931
+        },
+        {
+          "word": "grades",
+          "similarity": 0.9929
+        }
+      ],
+      "phd": [
+        {
+          "word": "stages",
+          "similarity": 0.9962
+        },
+        {
+          "word": "great",
+          "similarity": 0.9961
+        },
+        {
+          "word": "compete",
+          "similarity": 0.9961
+        },
+        {
+          "word": "rapid",
+          "similarity": 0.9958
+        },
+        {
+          "word": "manpower",
+          "similarity": 0.9958
+        }
+      ],
+      "exam": [
+        {
+          "word": "databases",
+          "similarity": 0.998
+        },
+        {
+          "word": "entrance",
+          "similarity": 0.9978
+        },
+        {
+          "word": "reporting",
+          "similarity": 0.9972
+        },
+        {
+          "word": "trimester",
+          "similarity": 0.997
+        },
+        {
+          "word": "syllabus",
+          "similarity": 0.9969
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "degree",
+            "similarity": 0.9882
+          },
+          {
+            "word": "applicant",
+            "similarity": 0.9857
+          },
+          {
+            "word": "must",
+            "similarity": 0.9836
+          },
+          {
+            "word": "requirements",
+            "similarity": 0.9786
+          },
+          {
+            "word": "cgpa",
+            "similarity": 0.9777
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "academic",
+            "similarity": 0.7324
+          },
+          {
+            "word": "credits",
+            "similarity": 0.6317
+          },
+          {
+            "word": "program",
+            "similarity": 0.6301
+          },
+          {
+            "word": "minimum",
+            "similarity": 0.6079
+          },
+          {
+            "word": "hour",
+            "similarity": 0.6022
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "credits",
+            "similarity": 0.9861
+          },
+          {
+            "word": "academic",
+            "similarity": 0.976
+          },
+          {
+            "word": "leave",
+            "similarity": 0.9604
+          },
+          {
+            "word": "students",
+            "similarity": 0.9576
+          },
+          {
+            "word": "activities",
+            "similarity": 0.9574
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "credits",
+            "similarity": 0.9896
+          },
+          {
+            "word": "course",
+            "similarity": 0.9886
+          },
+          {
+            "word": "earned",
+            "similarity": 0.9863
+          },
+          {
+            "word": "students",
+            "similarity": 0.9854
+          },
+          {
+            "word": "requirements",
+            "similarity": 0.9845
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "entrepreneurship",
+            "similarity": 0.9884
+          },
+          {
+            "word": "mobility",
+            "similarity": 0.9876
+          },
+          {
+            "word": "computation",
+            "similarity": 0.9875
+          },
+          {
+            "word": "smart",
+            "similarity": 0.9872
+          },
+          {
+            "word": "rcric",
+            "similarity": 0.986
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SG_B",
+    "type": "skipgram",
+    "vector_size": 100,
+    "window": 5,
+    "negative": 10,
+    "epochs": 15,
+    "vocab_size": 16990,
+    "training_time_sec": 1120.32,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "development",
+          "similarity": 0.9648
+        },
+        {
+          "word": "materials",
+          "similarity": 0.9622
+        },
+        {
+          "word": "computer",
+          "similarity": 0.9607
+        },
+        {
+          "word": "mechanical",
+          "similarity": 0.9586
+        },
+        {
+          "word": "chemical",
+          "similarity": 0.951
+        }
+      ],
+      "student": [
+        {
+          "word": "evaluation",
+          "similarity": 0.9758
+        },
+        {
+          "word": "registration",
+          "similarity": 0.9729
+        },
+        {
+          "word": "related",
+          "similarity": 0.9712
+        },
+        {
+          "word": "programme",
+          "similarity": 0.9707
+        },
+        {
+          "word": "pwd",
+          "similarity": 0.9697
+        }
+      ],
+      "phd": [
+        {
+          "word": "division",
+          "similarity": 0.9848
+        },
+        {
+          "word": "faculty",
+          "similarity": 0.9769
+        },
+        {
+          "word": "coe",
+          "similarity": 0.9767
+        },
+        {
+          "word": "report",
+          "similarity": 0.9761
+        },
+        {
+          "word": "idrp",
+          "similarity": 0.9761
+        }
+      ],
+      "exam": [
+        {
+          "word": "convocation",
+          "similarity": 0.9966
+        },
+        {
+          "word": "questions",
+          "similarity": 0.9965
+        },
+        {
+          "word": "tab",
+          "similarity": 0.996
+        },
+        {
+          "word": "bodies",
+          "similarity": 0.9959
+        },
+        {
+          "word": "entrance",
+          "similarity": 0.9959
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "degree",
+            "similarity": 0.9865
+          },
+          {
+            "word": "master",
+            "similarity": 0.9766
+          },
+          {
+            "word": "dual",
+            "similarity": 0.9662
+          },
+          {
+            "word": "mtech",
+            "similarity": 0.9568
+          },
+          {
+            "word": "admission",
+            "similarity": 0.9536
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "credits",
+            "similarity": 0.8
+          },
+          {
+            "word": "semester",
+            "similarity": 0.7773
+          },
+          {
+            "word": "graded",
+            "similarity": 0.7667
+          },
+          {
+            "word": "earned",
+            "similarity": 0.7665
+          },
+          {
+            "word": "requirements",
+            "similarity": 0.764
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "credits",
+            "similarity": 0.9705
+          },
+          {
+            "word": "semester",
+            "similarity": 0.9529
+          },
+          {
+            "word": "earned",
+            "similarity": 0.9486
+          },
+          {
+            "word": "credit",
+            "similarity": 0.9475
+          },
+          {
+            "word": "graded",
+            "similarity": 0.9459
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "earned",
+            "similarity": 0.9888
+          },
+          {
+            "word": "credits",
+            "similarity": 0.9871
+          },
+          {
+            "word": "requirements",
+            "similarity": 0.9848
+          },
+          {
+            "word": "table",
+            "similarity": 0.9784
+          },
+          {
+            "word": "course",
+            "similarity": 0.9746
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "abhiyan",
+            "similarity": 0.9575
+          },
+          {
+            "word": "saide",
+            "similarity": 0.9567
+          },
+          {
+            "word": "unnat",
+            "similarity": 0.9557
+          },
+          {
+            "word": "robotics",
+            "similarity": 0.9543
+          },
+          {
+            "word": "relations",
+            "similarity": 0.9543
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SG_C",
+    "type": "skipgram",
+    "vector_size": 200,
+    "window": 7,
+    "negative": 15,
+    "epochs": 20,
+    "vocab_size": 16990,
+    "training_time_sec": 2275.91,
+    "nearest_neighbours": {
+      "research": [
+        {
+          "word": "areas",
+          "similarity": 0.9496
+        },
+        {
+          "word": "groups",
+          "similarity": 0.9468
+        },
+        {
+          "word": "applications",
+          "similarity": 0.9442
+        },
+        {
+          "word": "healthcare",
+          "similarity": 0.9439
+        },
+        {
+          "word": "design",
+          "similarity": 0.9426
+        }
+      ],
+      "student": [
+        {
+          "word": "awarded",
+          "similarity": 0.9563
+        },
+        {
+          "word": "first",
+          "similarity": 0.9063
+        },
+        {
+          "word": "part",
+          "similarity": 0.8915
+        },
+        {
+          "word": "supervisor",
+          "similarity": 0.8875
+        },
+        {
+          "word": "programme",
+          "similarity": 0.887
+        }
+      ],
+      "phd": [
+        {
+          "word": "fellowship",
+          "similarity": 0.9629
+        },
+        {
+          "word": "young",
+          "similarity": 0.949
+        },
+        {
+          "word": "mathematics",
+          "similarity": 0.9471
+        },
+        {
+          "word": "engineering",
+          "similarity": 0.9341
+        },
+        {
+          "word": "department",
+          "similarity": 0.9324
+        }
+      ],
+      "exam": [
+        {
+          "word": "download",
+          "similarity": 0.9948
+        },
+        {
+          "word": "finanical",
+          "similarity": 0.9911
+        },
+        {
+          "word": "trimester",
+          "similarity": 0.9887
+        },
+        {
+          "word": "asked",
+          "similarity": 0.9857
+        },
+        {
+          "word": "divisions",
+          "similarity": 0.9854
+        }
+      ]
+    },
+    "analogies": [
+      {
+        "label": "undergraduate : bachelor :: postgraduate : ?",
+        "results": [
+          {
+            "word": "master",
+            "similarity": 0.9813
+          },
+          {
+            "word": "bachelors",
+            "similarity": 0.9353
+          },
+          {
+            "word": "masters",
+            "similarity": 0.9296
+          },
+          {
+            "word": "doctor",
+            "similarity": 0.9266
+          },
+          {
+            "word": "mtech",
+            "similarity": 0.9265
+          }
+        ]
+      },
+      {
+        "label": "professor : research :: student : ?",
+        "results": [
+          {
+            "word": "credits",
+            "similarity": 0.7557
+          },
+          {
+            "word": "earned",
+            "similarity": 0.7554
+          },
+          {
+            "word": "grade",
+            "similarity": 0.7543
+          },
+          {
+            "word": "calculated",
+            "similarity": 0.7506
+          },
+          {
+            "word": "continuation",
+            "similarity": 0.7501
+          }
+        ]
+      },
+      {
+        "label": "department : course :: faculty : ?",
+        "results": [
+          {
+            "word": "courses",
+            "similarity": 0.9385
+          },
+          {
+            "word": "given",
+            "similarity": 0.9143
+          },
+          {
+            "word": "credit",
+            "similarity": 0.911
+          },
+          {
+            "word": "credits",
+            "similarity": 0.9088
+          },
+          {
+            "word": "table",
+            "similarity": 0.906
+          }
+        ]
+      },
+      {
+        "label": "examinations : grade :: semester : ?",
+        "results": [
+          {
+            "word": "course",
+            "similarity": 0.9374
+          },
+          {
+            "word": "earned",
+            "similarity": 0.9285
+          },
+          {
+            "word": "credits",
+            "similarity": 0.9242
+          },
+          {
+            "word": "point",
+            "similarity": 0.9138
+          },
+          {
+            "word": "table",
+            "similarity": 0.9121
+          }
+        ]
+      },
+      {
+        "label": "bachelor : undergraduate :: master : ?",
+        "results": [
+          {
+            "word": "planning",
+            "similarity": 0.942
+          },
+          {
+            "word": "introduction",
+            "similarity": 0.9366
+          },
+          {
+            "word": "graduate",
+            "similarity": 0.9333
+          },
+          {
+            "word": "initiative",
+            "similarity": 0.9329
+          },
+          {
+            "word": "skill",
+            "similarity": 0.932
+          }
+        ]
+      }
+    ]
+  }
+]

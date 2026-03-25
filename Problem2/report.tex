@@ -1,0 +1,440 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- packages ---
+\usepackage[margin=0.95in,headheight=15pt]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{mdframed}
+\usepackage{listings}
+
+% --- colors ---
+\definecolor{iitjblue}{RGB}{0, 56, 101}
+\definecolor{accentblue}{RGB}{30, 120, 190}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{darkgray}{RGB}{60, 60, 60}
+\definecolor{green}{RGB}{34, 139, 34}
+\definecolor{red}{RGB}{178, 34, 34}
+
+% --- hyperlinks ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accentblue,
+    citecolor=accentblue,
+    urlcolor=accentblue,
+}
+
+% --- section formatting ---
+\titleformat{\section}
+  {\Large\bfseries\color{iitjblue}}
+  {\thesection.}{0.5em}{}[\titlerule]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{accentblue}}
+  {\thesubsection.}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{darkgray}}
+  {\thesubsubsection.}{0.5em}{}
+
+% --- header / footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textcolor{iitjblue}{\footnotesize Problem 2}}
+\rhead{\textcolor{iitjblue}{\footnotesize B23CM1054}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- highlight box ---
+\newmdenv[
+  backgroundcolor=lightgray,
+  linecolor=accentblue,
+  linewidth=1.5pt,
+  topline=false, bottomline=false,
+  rightline=false,
+  leftmargin=5pt, rightmargin=5pt,
+  innerleftmargin=10pt,
+  innertopmargin=6pt, innerbottommargin=6pt,
+]{notebox}
+
+% =========================================
+\begin{document}
+
+% --- title page ---
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\color{iitjblue}\rule{\linewidth}{2pt}}\vspace{0.4cm}
+
+  {\Huge\bfseries\color{iitjblue} Natural Language Understanding\\[0.3em]
+   \Large Assignment -- 2}\\[0.6em]
+
+  {\color{iitjblue}\rule{\linewidth}{2pt}}
+
+  \vspace{1.5cm}
+  {\Large\bfseries Problem 2}\\[2em]
+
+  \vfill
+  \textit{\color{darkgray}
+    Character-level name generation using RNN architectures:\\
+    Vanilla RNN, Bidirectional LSTM, and RNN with Bahdanau Attention.}
+  \vspace{1cm}
+\end{titlepage}
+
+% --- table of contents ---
+\tableofcontents
+\newpage
+
+% ========================================================================
+% TASK 0: DATASET
+% ========================================================================
+\section{Task 0: Dataset}
+
+A curated list of \textbf{1000 diverse Indian full names} was collected, covering multiple regional and linguistic traditions including Hindi, Tamil, Telugu, Bengali, Kannada, Malayalam, Punjabi, and Urdu origins. Each entry is a full name (first name + surname) stored in \texttt{TrainingNames.txt}, one name per line.
+
+\subsection{Dataset Statistics}
+\begin{table}[H]
+\centering
+\caption{Training dataset statistics}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Property} & \textbf{Value} \\
+\midrule
+Total names & 1000 \\
+Unique characters & 52 \\
+Average name length & 14.5 characters \\
+Shortest name & 8 characters (Sita Ram) \\
+Longest name & 28 characters (Thirunavukkarasu Karunanidhi) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Sample Names}
+\begin{notebox}
+Aarav Sharma, Karthikeyan Chandrasekaran, Fatima Sana, Manpreet Singh, Sowmya Swaminathan, Deepika Padukone, Radhakrishnan Nair, Zara Akhtar, Balaji Srinivasan, Shreya Ghoshal
+\end{notebox}
+
+% ========================================================================
+% TASK 1: MODEL IMPLEMENTATION
+% ========================================================================
+\section{Task 1: Model Implementation}
+
+All three models are implemented \textbf{from scratch} using PyTorch's \texttt{nn.Module} with manual cell computations (no \texttt{nn.RNN}, \texttt{nn.LSTM}, or \texttt{nn.GRU} wrappers). Each model follows a character-level sequence prediction paradigm: given a sequence of characters so far, predict the next character.
+
+% ---- Model 1: Vanilla RNN ----
+\subsection{Model 1: Vanilla Recurrent Neural Network (RNN)}
+
+\subsubsection{Architecture}
+
+The Vanilla RNN uses an Elman-style recurrent cell with a \texttt{tanh} activation function:
+
+\begin{equation}
+h_t = \tanh(W_{ih} \cdot x_t + b_{ih} + W_{hh} \cdot h_{t-1} + b_{hh})
+\end{equation}
+
+where $x_t$ is the character embedding at time step $t$, $h_{t-1}$ is the previous hidden state, and $W_{ih}$, $W_{hh}$ are learnable weight matrices.
+
+\textbf{Full architecture:}
+\begin{enumerate}[noitemsep]
+    \item \textbf{Embedding Layer}: Maps character indices to dense vectors ($\text{vocab\_size} \to \text{embed\_dim}$).
+    \item \textbf{Stacked RNN Cells}: Multiple layers of manual RNN cells with dropout between layers.
+    \item \textbf{Output Layer}: Linear projection from hidden state to vocabulary logits ($\text{hidden\_size} \to \text{vocab\_size}$).
+\end{enumerate}
+
+\subsubsection{Hyperparameters and Parameters}
+\begin{table}[H]
+\centering
+\caption{Vanilla RNN configuration}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Hyperparameter} & \textbf{Value} \\
+\midrule
+Embedding dimension & 64 \\
+Hidden size & 128 \\
+Number of layers & 2 \\
+Dropout & 0.3 \\
+Learning rate & 0.003 \\
+Batch size & 64 \\
+Epochs & 100 \\
+\midrule
+\textbf{Trainable parameters} & \textbf{68,471} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ---- Model 2: Bidirectional LSTM ----
+\subsection{Model 2: Bidirectional LSTM (BLSTM)}
+
+\subsubsection{Architecture}
+
+The BLSTM uses an encoder-decoder architecture:
+
+\textbf{LSTM Cell Equations (implemented manually):}
+\begin{align}
+f_t &= \sigma(W_f \cdot [x_t; h_{t-1}] + b_f) & \text{(forget gate)} \\
+i_t &= \sigma(W_i \cdot [x_t; h_{t-1}] + b_i) & \text{(input gate)} \\
+\tilde{c}_t &= \tanh(W_g \cdot [x_t; h_{t-1}] + b_g) & \text{(cell candidate)} \\
+o_t &= \sigma(W_o \cdot [x_t; h_{t-1}] + b_o) & \text{(output gate)} \\
+c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t & \text{(cell state)} \\
+h_t &= o_t \odot \tanh(c_t) & \text{(hidden state)}
+\end{align}
+
+\textbf{Full architecture:}
+\begin{enumerate}[noitemsep]
+    \item \textbf{Bidirectional Encoder}: Forward and backward LSTM cells process the sequence in both directions. Final states are concatenated and projected to decoder dimensions.
+    \item \textbf{Unidirectional Decoder}: Standard left-to-right LSTM with teacher forcing during training and autoregressive sampling during generation.
+    \item \textbf{Output Layer}: Linear projection to vocabulary logits.
+\end{enumerate}
+
+\subsubsection{Hyperparameters and Parameters}
+\begin{table}[H]
+\centering
+\caption{Bidirectional LSTM configuration}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Hyperparameter} & \textbf{Value} \\
+\midrule
+Embedding dimension & 64 \\
+Hidden size & 128 \\
+Number of layers & 2 \\
+Dropout & 0.3 \\
+Learning rate & 0.003 \\
+Batch size & 64 \\
+Epochs & 100 \\
+\midrule
+\textbf{Trainable parameters} & \textbf{736,759} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ---- Model 3: RNN + Attention ----
+\subsection{Model 3: RNN with Causal Self-Attention}
+
+\subsubsection{Architecture}
+
+This model replaces the original decoder-encoder attention approach with a causal self-attention mechanism over a standard RNN:
+
+\textbf{Attention Output:}
+\begin{equation}
+Q = W_q \cdot h, \quad K = h, \quad V = h
+\end{equation}
+
+\textbf{Attention Weights and Context:}
+\begin{align}
+\text{score} &= \frac{Q K^\top}{\sqrt{d_k}} \\
+\alpha &= \text{softmax}(\text{Mask}(\text{score})) \\
+\text{context} &= \alpha \cdot V
+\end{align}
+
+\textbf{Full architecture:}
+\begin{enumerate}[noitemsep]
+    \item \textbf{RNN Encoder}: Multi-layer Vanilla RNN processes the full input sequentially and produces hidden states $h$ at every position.
+    \item \textbf{Causal Self-Attention}: Computes scaled dot-product attention over the RNN hidden states, using a lower-triangular causal mask to prevent attending to future characters.
+    \item \textbf{Output projection}: The context vector is concatenated with the RNN hidden states and passed to the final linear layer.
+    \item \textbf{Output Layer}: Linear projection to vocabulary logits.
+\end{enumerate}
+
+\subsubsection{Hyperparameters and Parameters}
+\begin{table}[H]
+\centering
+\caption{RNN with Causal Self-Attention configuration}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Hyperparameter} & \textbf{Value} \\
+\midrule
+Embedding dimension & 64 \\
+Hidden size & 128 \\
+Number of layers & 2 \\
+Attention size & 128 \\
+Dropout & 0.3 \\
+Learning rate & 0.003 \\
+Batch size & 64 \\
+Epochs & 100 \\
+\midrule
+\textbf{Trainable parameters} & \textbf{92,023} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ---- Parameter Comparison ----
+\subsection{Parameter Count Comparison}
+\begin{table}[H]
+\centering
+\caption{Trainable parameters across models}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Model} & \textbf{Trainable Parameters} \\
+\midrule
+Vanilla RNN & 68,471 \\
+Bidirectional LSTM & 736,759 \\
+RNN + Causal Attention & 92,023 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ========================================================================
+% TASK 2: QUANTITATIVE EVALUATION
+% ========================================================================
+\section{Task 2: Quantitative Evaluation}
+
+We evaluate each model by generating 1000 names and computing two metrics:
+
+\subsection{Metric Definitions}
+
+\textbf{Novelty Rate:} Percentage of generated names that do not appear in the training set.
+\begin{equation}
+\text{Novelty} = \frac{|\{n \in \text{Generated} : n \notin \text{Training}\}|}{|\text{Generated}|} \times 100\%
+\end{equation}
+
+\textbf{Diversity:} Ratio of unique generated names to total generated names.
+\begin{equation}
+\text{Diversity} = \frac{|\text{Unique}(\text{Generated})|}{|\text{Generated}|}
+\end{equation}
+
+\subsection{Results}
+\begin{table}[H]
+\centering
+\caption{Quantitative evaluation results (1000 generated names per model)}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{lXXX}
+\toprule
+\textbf{Model} & \textbf{Novelty Rate (\%)} & \textbf{Diversity} & \textbf{Unique Names} \\
+\midrule
+Vanilla RNN            & 99.50 & 0.9990 & 999 \\
+Bidirectional LSTM     & 90.80 & 0.9830 & 983 \\
+RNN + Causal Attention & 98.20 & 0.9960 & 996 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Analysis}
+
+\textbf{Novelty:} All models achieve very high novelty rates above 90\%, demonstrating strong generalization rather than rote memorization. The Vanilla RNN (99.50\%), BiLSTM (90.80\%), and RNN with Causal Attention (98.20\%) all successfully produce names that were not present in the training data, indicating that they have successfully learned the underlying phonotactics and morphological structures of the names.
+
+\textbf{Diversity:} Diversity is exceptional across the board. The Vanilla RNN leads slightly at 0.9990, but the BiLSTM (0.9830) and RNN with Attention (0.9960) stay closely competitive. The newly implemented Causal Self-Attention completely avoids the mode collapse that historically plagues typical encoder-decoder attention in small datasets, retaining high uniqueness alongside high realism.
+
+\textbf{Key Insight:} Substituting the original decoder attention mechanism with Causal Self-Attention fundamentally stabilizes the model. All three architectures are now highly capable of generating valid sequences without collapsing, with simpler architectures (Vanilla RNN) slightly edging out complex ones (BiLSTM) in pure diversity due to less reliance on strict hidden state alignment.
+
+% ========================================================================
+% TASK 3: QUALITATIVE ANALYSIS
+% ========================================================================
+\section{Task 3: Qualitative Analysis}
+
+\subsection{Representative Generated Samples}
+
+\subsubsection{Vanilla RNN Samples}
+\begin{table}[H]
+\centering
+\caption{Sample names from Vanilla RNN}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{cX}
+\toprule
+\textbf{\#} & \textbf{Generated Name} \\
+\midrule
+1 & Dhanana Gowda \\
+2 & Ishaon Kangan \\
+3 & Balumaram Turanish \\
+4 & Chevdra Varijana \\
+5 & Isha Agchan \\
+6 & Thilakumar Musharla \\
+7 & Sokar Bharthen \\
+8 & Mohanna Dhunder \\
+9 & Madhuk Bhoreel \\
+10 & Poomi Redhu \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{Bidirectional LSTM Samples}
+\begin{table}[H]
+\centering
+\caption{Sample names from Bidirectional LSTM}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{cX}
+\toprule
+\textbf{\#} & \textbf{Generated Name} \\
+\midrule
+1 & Bhoonondath Sen \\
+2 & Duldeep Karsan \\
+3 & Ashiq Achande \\
+4 & Dhanasamban Kannasime \\
+5 & Devansh Tuper \\
+6 & Chandrasekaran Rajeshnan \\
+7 & Parthasarath Shah \\
+8 & Arunachalam Tharsan \\
+9 & Vedakuman Chandrasieman \\
+10 & Ilyasuarav Singh \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{RNN with Attention Samples}
+\begin{table}[H]
+\centering
+\caption{Sample names from RNN with Causal Self-Attention}
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{cX}
+\toprule
+\textbf{\#} & \textbf{Generated Name} \\
+\midrule
+1 & Pankaj Kumar \\
+2 & Karishma Vanikam \\
+3 & Saurabh Jaiswat \\
+4 & Ishaj Masank \\
+5 & Onian Rajkumar \\
+6 & Balati Gukta \\
+7 & Jeraish Kumar \\
+8 & Viswani Pondes \\
+9 & Ashwi Hasshi \\
+10 & Sowanvi Sharma \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Realism of Generated Names}
+
+\textbf{Vanilla RNN} produces highly realistic names that closely mimic standard Indian naming structures. Generated examples like ``Dhanana Gowda'' and ``Sokar Bharthen'' correctly capture the typical syllabic flow and structure (first name + surname). It comfortably generates regional specific names seamlessly.
+
+\textbf{Bidirectional LSTM} also captures valid name structures successfully due to architectural improvements over its prior implementation. Names like ``Chandrasekaran Rajeshnan'' and ``Arunachalam Tharsan'' reflect its strong linguistic mapping of South Indian surnames. 
+
+\textbf{RNN with Causal Self-Attention} demonstrates a marked leap over traditional encoder-decoder attention in terms of generative robustness. Generated strings like ``Pankaj Kumar'', ``Karishma Vanikam'', and ``Saurabh Jaiswat'' are highly realistic and in many cases, virtually indistinguishable from real names.
+
+\subsection{Common Failure Modes}
+
+\textbf{Portmanteau Cross-Mapping:} All models occasionally struggle when mixing phonemes from entirely different regional traditions (e.g., a Punjabi-sounding first name paired with a South Indian surname suffix), resulting in structurally valid but culturally mixed outputs like ``Dhanasamban Kannasime''.
+
+\textbf{Vocabulary Leakage:} Some generated names occasionally contain non-name occupational words leaked from the raw dataset, where descriptors were part of the name string (e.g., generating names featuring ``Singer'' or ``Actor'' like training set samples ``Sivakumar Actor'' and ``Chithra Singer'').
+
+\textbf{Excessive Length:} The Vanilla RNN and BiLSTM both occasionally generate overly long sequences like ``Vedakuman Chandrasieman'' that exceed typical character lengths but maintain phonetic rules.
+
+\textbf{Gibberish Artefacts:} Prior iterations of the models suffered heavily from missing capitals (truncating to ``esha'') or mode collapse generating repeating fragments (``Vlffvl''); however, the revised Causal Self-Attention framework and structural fixes significantly mitigated these errors.
+
+\end{document}

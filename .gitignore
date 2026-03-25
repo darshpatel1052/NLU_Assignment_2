@@ -1,0 +1,47 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Trained models (too large for git)
+*.model
+*.pkl
+Problem1/models/
+Problem2/checkpoints/
+
+# Raw scraped data (can be regenerated)
+Problem1/corpus/raw/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Discovered links log
+Problem1/discovered_links.txt
+
+# Submission zip
+B23CM1054-A2/
+B23CM1054-A2.zip
